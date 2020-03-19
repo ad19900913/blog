@@ -16,7 +16,7 @@
 
 参考网站https://github.com/chobits/ngx_http_proxy_connect_module
 
-```shell
+```shell script
 cd /root
 wget http://nginx.org/download/nginx-1.16.1.tar.gz
 git clone https://github.com/chobits/ngx_http_proxy_connect_module
@@ -34,7 +34,7 @@ curl http://localhost/index.html
 
 正向代理配置参考官方文档例子
 
-```
+```yaml
  server {
      listen                         3128;
 
@@ -60,7 +60,7 @@ curl http://localhost/index.html
 
 修改nginx.conf配置文件
 
-```
+```yaml
 server {
 	listen 8000; # 端口
 	server_name localhost; # 服务名
@@ -73,4 +73,36 @@ server {
 	}
 }
 ```
+
+## 自定义404页面
+```yaml
+user root;
+
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    proxy_intercept_errors  on;
+
+    server {
+        listen       80 default_server;
+        listen       [::]:80 default_server;
+        server_name  sisyphus.tech www.sisyphus.tech;
+        root        /home/git/www;
+        error_page  404   /404.html;
+        location = /404.html {
+                root   /home/git/www;
+        }
+    }
+
+}
+```
+接入腾讯公益404页面，介绍在http://www.qq.com/404
 
