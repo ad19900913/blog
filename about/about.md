@@ -1,3 +1,10 @@
+---
+categories:
+- Diary
+tags:
+- PS3
+- Games
+---
 # 关于我
 - 1990年出生
 - 2012年毕业，建筑安全专业
