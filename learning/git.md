@@ -19,3 +19,12 @@ pro-git这本书绝对值得细读一遍。测试一下git的合并分支、解�
 利用`git remote set-url --add [--push] <name> <newurl>`命令可以实现一次push两个远程分支。
 
 对于同时维护部署在私服和公共服务器上的仓库，十分方便。
+
+`git diff`命令看到如下结果，是因为改了文件权限。
+
+```shell script
+[root@VM_0_3_centos next]# git diff source/js/bookmark.js
+diff --git a/source/js/bookmark.js b/source/js/bookmark.js
+old mode 100644
+new mode 100755
+```

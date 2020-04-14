@@ -106,3 +106,6 @@ http {
 ```
 接入腾讯公益404页面，介绍在http://www.qq.com/404
 
+## 代理多个域名
+
+主要参考https://blog.csdn.net/u013264030/article/details/79853614
