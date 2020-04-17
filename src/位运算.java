@@ -1,4 +1,4 @@
-public class Test {
+public class 位运算 {
 
     public static void main(String[] args) {
         int i = 1990;
