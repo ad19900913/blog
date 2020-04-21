@@ -10,6 +10,8 @@
 
 docker pull redis
 
+<!-- more -->
+
 ## 运行redis镜像
 
 ```shell

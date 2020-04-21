@@ -2,19 +2,14 @@
 
 ## 不同数据库驱动及链接
 
-### HSQLDB
-
-#jdbc.driverClassName=org.hsqldb.jdbcDriver
-#jdbc.url=jdbc:hsqldb:hsql://localhost:9001/bookstore
-#jdbc.username=
-#jdbc.password=
-
 ### MySQL 5 ###
 
 jdbc.driverClassName=com.mysql.jdbc.Driver
 jdbc.url=jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=GBK
 jdbc.username=root
 jdbc.password=root
+
+<!-- more -->
 
 ### PostgreSQL
 
@@ -23,27 +18,12 @@ jdbc.password=root
 #jdbc.username=
 #jdbc.password=
 
-
 ### Oracle ###
 
 #jdbc.driverClassName=oracle.jdbc.driver.OracleDriver
 #jdbc.url=jdbc:oracle:thin:@192.168.1.250:1521:devdb
 #jdbc.username=HFOSPSP
 #jdbc.password=HFOSPSP
-
-### MS SQL Server 2000 (JTDS)
-
-#jdbc.driverClassName=net.sourceforge.jtds.jdbc.Driver
-#jdbc.url=jdbc:jtds:sqlserver://localhost:1433/bookstore
-#jdbc.username=
-#jdbc.password=
-
-### MS SQL Server 2000 (Microsoft)
-
-#jdbc.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
-#jdbc.url=jdbc:sqlserver://192.168.1.130:1433;database=ahos;user=sa;password=ahtec";
-#jdbc.username=sa
-#jdbc.password=ahtec
 
 ### ODBC
 

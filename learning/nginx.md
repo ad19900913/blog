@@ -8,7 +8,9 @@
 
 按照顺序编译安装pcre、libtool、nginx
 
-安装完成后建立软连接 ln -s /usr/local/nginx/sbin/nginx  /usr/local/sbin/nginx 
+安装完成后建立软连接 ln -s /usr/local/nginx/sbin/nginx  /usr/local/sbin/nginx
+
+<!-- more --> 
 
 ## 编译安装正向代理模块
 

@@ -11,6 +11,8 @@ https://www.liaoxuefeng.com/wiki/1252599548343744
 - RI：Reference Implementation
 - TCK：Technology Compatibility Kit
 
+<!-- more -->
+
 ## var关键字
 
 ```java

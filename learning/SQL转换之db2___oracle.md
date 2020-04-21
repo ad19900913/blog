@@ -8,6 +8,9 @@
 * db2:LIMIT N
 * db2:fetch first N rows only
 * oracle:rownum <= N
+
+<!-- more -->
+
 ## 字符串拼接
 * db2:CONCAT
 * oracle:||

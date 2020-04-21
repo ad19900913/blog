@@ -4,6 +4,8 @@
 
 settings.xml的模板文件及字段说明-https://maven.apache.org/ref/3.6.3/maven-settings/settings.html
 
+<!-- more -->
+
 ## 仓库相关
 
 安装jar包到本地仓库
