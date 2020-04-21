@@ -77,3 +77,87 @@ int opt = switch (fruit) {
 };
 System.out.println("opt = " + opt);
 ```
+
+## 记录类
+
+从Java 14开始，提供新的record关键字，可以非常方便地定义Data Class：
+
+使用record定义的是不变类；
+
+可以编写Compact Constructor对参数进行验证；
+
+可以定义静态方法。
+
+```java
+public static void main(String[] args) {
+    Point p = new Point(123, 456);
+    System.out.println(p.x());
+    System.out.println(p.y());
+    System.out.println(p);
+}
+
+public record Point(int x, int y) {
+    public Point {
+        // 这是我们编写的Compact Constructor:
+        if (x < 0 || y < 0) {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    public static Point of() {
+        return new Point(0, 0);
+    }
+
+    public static Point of(int x, int y) {
+        return new Point(x, y);
+    }
+}
+```
+
+## NullPointerException
+
+从Java 14开始，如果产生了NullPointerException，JVM可以给出详细的信息告诉我们null对象到底是谁。
+
+```java
+public class Test {
+
+    public static void main(String[] args) {
+        Person p = new Person();
+        System.out.println(p.address.city.toLowerCase());
+    }
+
+}
+
+class Person {
+    String[] name = new String[2];
+    Address address = new Address();
+}
+
+class Address {
+    String city;
+    String street;
+    String zipcode;
+}
+```
+
+可以在NullPointerException的详细信息中看到类似... because "<local1>.address.city" is null，意思是city字段为null，这样我们就能快速定位问题所在。
+
+这种增强的NullPointerException详细信息是Java 14新增的功能，但默认是关闭的，我们可以给JVM添加一个-XX:+ShowCodeDetailsInExceptionMessages参数启用它
+
+## 注解
+
+几种常用的元注解
+
+### @Target
+
+- 类或接口：ElementType.TYPE；
+- 字段：ElementType.FIELD；
+- 方法：ElementType.METHOD；
+- 构造方法：ElementType.CONSTRUCTOR；
+- 方法参数：ElementType.PARAMETER。
+
+### @Retention
+
+- 仅编译期：RetentionPolicy.SOURCE；
+- 仅class文件：RetentionPolicy.CLASS；
+- 运行期：RetentionPolicy.RUNTIME。

@@ -1,17 +1,20 @@
-import java.util.Random;
-
 public class Test {
 
     public static void main(String[] args) {
-        int x = new Random().nextInt();
-        switch (x) {
-            case 1 -> System.out.println("1");
-            case 2 -> {
-                System.out.println("2");
-                System.out.println("3");
-            }
-            default -> System.out.println("default");
-        }
-
+        Person p = new Person();
+        System.out.println(p.address.city.toLowerCase());
     }
+
+
+}
+
+class Person {
+    String[] name = new String[2];
+    Address address = new Address();
+}
+
+class Address {
+    String city;
+    String street;
+    String zipcode;
 }
