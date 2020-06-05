@@ -14,6 +14,10 @@ git中提供了钩子,可以在提交代码后触发,用来自动部署网站内
 
 几种hooks的触发场景与应用
 
+git-hooks按部署位置分为客户端、服务端
+
+post-commit:在客户端提交后，触发，可用于本地自动部署应用
+
 pro-git这本书绝对值得细读一遍。测试一下git的合并分支、解决冲突功能.
 
 利用`git remote set-url --add [--push] <name> <newurl>`命令可以实现一次push两个远程分支。
