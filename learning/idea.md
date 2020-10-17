@@ -6,9 +6,13 @@
 
 ## 常用快捷键
 
-- crtl + k:提交代码
-- crtl + shift + k:推送代码到远程仓库
-- crtl + d:复制一行代码
-- crtl + y:删除一行代码
-- crtl + e:查看最近打开的文件列表
-- alt + 数字:打开/隐藏数字对应的视图
+- <kbd>Ctrl</kbd> + <kbd>K</kbd>:提交代码
+- <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd>:推送代码到远程仓库
+- <kbd>Ctrl</kbd> + <kbd>D</kbd>:复制一行代码
+- <kbd>Ctrl</kbd> + <kbd>Y</kbd>:删除一行代码
+- <kbd>Ctrl</kbd> + <kbd>E</kbd>:查看最近打开的文件列表
+- <kbd>Alt</kbd> + <kbd>0-9</kbd>:打开/隐藏数字对应的视图
+
+## 常用设置
+
+- 设置编辑窗口宽度:File | Settings | Editor | Code Style | Hard wrap at

@@ -1,0 +1,3 @@
+AQS是AbstractQueuedSynchronizer的简称
+
+目标一：使用AbstractQueuedSynchronizer实现一个不可重入独占锁
